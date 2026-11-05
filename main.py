@@ -1,25 +1,31 @@
-def sum_for_list(lst):
-    lst=[12,15]
-    # for i in lst:
-        # divisiton(i)
-    
-
-def divisiton(n):
-    res=[]
-    for i in range(2,n//2+1):
-        if n%i==0:
-            res.append(i)
-    return res
+def zero(op=None):   return 0 if op is None else op(0)
+def one(op=None):    return 1 if op is None else op(1)
+def two(op=None):    return 2 if op is None else op(2)
+def three(op=None):  return 3 if op is None else op(3)
+def four(op=None):   return 4 if op is None else op(4)
+def five(op=None):   return 5 if op is None else op(5)
+def six(op=None):    return 6 if op is None else op(6)
+def seven(op=None):  return 7 if op is None else op(7)
+def eight(op=None):  return 8 if op is None else op(8)
+def nine(op=None):   return 9 if op is None else op(9)
 
 
-def prime(lst):
-    res=[]
-    for i in lst:
-        print(divisiton(i))
-            # res.append(i)
-    # return res
+def plus(b):
+    def inner(a):
+        return a + b
+    return inner
 
-lst=[12,15]
-print(
-    prime([2,3,4,6])
-)
+def minus(b):
+    def inner(a):
+        return a - b
+    return inner
+
+def times(b):
+    def inner(a):
+        return a * b
+    return inner
+
+def divided_by(b):
+    def inner(a):
+        return a // b
+    return inner
